@@ -1,0 +1,227 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    /* background-color: black; */
+    /* color:#6C63FF; */
+}
+.navlinks{
+    height: 10vh;
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    /* float: right; */
+    /* background-color:#6C63FF; */
+    /* color: aliceblue; */
+    color: #6C63FF;
+    width: 500px;
+}
+.navlinks li{
+    list-style: none;
+    padding:10px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.navlinks li:hover{
+    background-color: #6C63FF;
+    color: aliceblue;
+    border-radius:10px;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    font-family: 'Playfair Display', serif;
+    /* margin:auto; */
+}
+main h1{
+    /* color: white; */
+    font-family: 'Roboto Slab', serif;
+    font-size: 45px;
+    letter-spacing: 3px;
+    line-height: 100px;
+    /* padding: 20px; */
+    /* position: absolute;
+    top:20%;
+    left: 7%; */
+}
+main h3{
+    /* color: white; */
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+    position: absolute;
+    top:60%;
+    left: 7%;
+    font-size: 30px;
+    color: #6C63FF;
+    /* transform: translate(-50%,-50%); */
+    /* display: inline; */
+}
+#intro{
+    position: relative;
+    white-space: nowrap;
+}
+.hide10{
+    display:none;
+}
+.enter{
+    display: block;
+    opacity: 0;
+     animation: enter 1s linear forwards;
+}
+@keyframes enter{
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    50%{
+        opacity: .3;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes exit{
+    0%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    50%{
+        opacity: .3;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-40px);
+        display: none;
+    }
+}
+.exit{
+   opacity: 0;
+    animation: exit 1s linear forwards;
+}
+@media(max-width:1100px){
+    main h1{
+        font-size:32px;
+    }   
+    .svgcharacter{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media(max-width:800px){
+    main h1{
+        font-size:33px;
+        line-height: normal;
+        text-align: center;
+        /* margin-top: 100px; */
+        /* position: absolute;
+        top:40%;
+        left: 2%; */
+    }main h3{
+        top: 75%;
+        left: 35%;
+        font-size: 30px;
+    }
+main{
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    margin-bottom:20vh ;
+}
+}
+@media(max-width:500px){
+    nav{
+        position: relative;
+    }
+    .hamburger{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        z-index: 200;
+    }
+    .line{
+        width:30px;
+        height: 1px;
+        margin: 5px;
+        background-color: #6C63FF;
+        z-index: 3;
+    }
+    .line.open{
+        background-color: aliceblue;
+    }
+    .navlinks{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        color: aliceblue;
+        background-color: #6C63FF;
+        flex-direction: column;
+        top: 0px;
+        z-index: 2;
+        clip-path: circle(0px at 90% 0%);
+        transition: all 1s ease-in-out;
+        pointer-events: none;
+    }
+    .navlinks.open{
+        clip-path: circle(800px at 90% 0%);
+        pointer-events: all;
+
+    }   
+    main{
+        /* transform: rotateZ(30); */
+        padding-top: 60px;
+        height: 80vh;}
+    main h1{
+        font-size: 30px;
+    }
+    .introwords{
+        position: relative;
+        display: block;
+        top:50%;
+        left: 0%;
+        transform: translateZ(30);
+        width: 100%;
+        text-align: center;
+        /* left:; */
+        /* transform: translate(-50%,-50%)!important; */
+        white-space: nowrap;
+    }
+}
+.optionheader{
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 3px;
+}
+.technologiesinabit{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(auto,minmax(400px,1fr)); */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: center;
+    align-content: center;
+    margin:auto;
+    text-align: center;
+}
+.eachtechnology{
+    margin:20px;
+    padding:20px;
+    border:1px solid rgba(0, 0, 0, 0.1)
+}
+.technologydesc{
+    padding:10px 30px;
+    font-size: 15px;
+    font-family: 'Roboto Slab', serif;
+}
+.technologyheading{
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}
