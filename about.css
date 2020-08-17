@@ -1,0 +1,59 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+.aboutusmain{
+    display: block;
+}
+.aboutheading{
+    font-size: 50px;
+    color: #6C63FF;
+    padding:50px 0px 20px 20px;
+}
+.aboutmedesc{
+    width: 70%;
+    padding:20px;
+}
+.aboutintro{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.downloadcv{
+    padding:20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #6C63FF;
+    color: aliceblue;
+    margin-left: 50px;
+}
+.downloadcv:hover{
+    background-color: aliceblue;
+    color: #6C63FF;
+    border:1px solid #6C63FF
+}
+.eachexperience img{
+    width: 50px;
+    height: 50px;
+    border-radius:50% ;
+    margin:20px 0px 10px 50px;
+}
+.experience{
+    display: flex;
+    margin: 20px;
+    /* align-items: center; */
+    /* width: 400px;
+    justify-content: space-around; */
+}
+@media(max-width:600px){
+    .aboutsvg{
+        /* display: none; */
+    }
+    .aboutmedesc{
+        width: 90%;
+    }
+    .aboutheading{
+        font-size: 30px;
+    }   
+}
