@@ -107,4 +107,7 @@
     .optionheader{
         width: 90%;
     }
+    .eachexperience{
+        clip-path:circle(23% at 27% 15%);
+    }   
 }
