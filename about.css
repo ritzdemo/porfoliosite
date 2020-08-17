@@ -33,6 +33,16 @@
     color: #6C63FF;
     border:1px solid #6C63FF
 }
+.eachexperience{
+    /* background-color: rgb(7, 218, 165); */
+    padding: 1em;
+    border-radius: 10px;
+    /* width: 320px; */
+    clip-path: circle(15% at 23% 40%);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+
+}
 .eachexperience img{
     width: 50px;
     height: 50px;
@@ -42,9 +52,43 @@
 .experience{
     display: flex;
     margin: 20px;
+    /* flex-wrap: wrap; */
     /* align-items: center; */
     /* width: 400px;
     justify-content: space-around; */
+}
+.eachexperience:hover{
+    clip-path: circle(75%);
+    background-color: #6C63FF;
+}
+.eachexperience.open{
+    clip-path: circle(75%);
+    background-color: #6C63FF;
+}
+.eachexperience img{
+    /* float: left; */
+    color: white;
+    font-weight: bold;
+    transition: color .5s;
+    /* position: relative; */
+    /* margin-right: 6%; */
+}
+.eachexperience:hover span{
+    /* color: rgba(0, 0, 0, 0); */
+}
+.eachexperience h1,.eachexperience p{
+    color: aliceblue;
+    display: block;
+}
+@media(max-width:1100px){
+    .eachexperience{
+        clip-path: circle(20% at 30% 45%);
+    }   
+}
+@media(max-width:800px){
+    .eachexperience{
+        clip-path: circle(30% at 37% 30%);
+    }   
 }
 @media(max-width:600px){
     .aboutsvg{
@@ -55,5 +99,8 @@
     }
     .aboutheading{
         font-size: 30px;
+    }
+    .eachexperience{
+        clip-path: circle(30% at 37% 30%);
     }   
 }
