@@ -92,7 +92,7 @@
 }
 @media(max-width:600px){
     .aboutsvg{
-        /* display: none; */
+        display: none;
     }
     .aboutmedesc{
         width: 90%;
@@ -103,5 +103,8 @@
     
     .experience{
         flex-wrap: wrap;
+    }
+    .optionheader{{
+        width: 90%;
     }
 }
