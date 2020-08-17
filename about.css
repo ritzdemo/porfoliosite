@@ -77,7 +77,7 @@
     /* color: rgba(0, 0, 0, 0); */
 }
 .eachexperience h1,.eachexperience p{
-    color: aliceblue;
+    color: white;
     display: block;
 }
 @media(max-width:1100px){
