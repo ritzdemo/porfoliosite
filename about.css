@@ -100,7 +100,8 @@
     .aboutheading{
         font-size: 30px;
     }
-    .eachexperience{
-        clip-path: circle(30% at 37% 30%);
-    }   
+    
+    .experience{
+        flex-wrap: wrap;
+    }
 }
