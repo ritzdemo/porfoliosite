@@ -3,10 +3,45 @@
     padding:0px;
     box-sizing: border-box;
 }
-body{
-    /* background-color: black; */
-    /* color:#6C63FF; */
-}
+/* svg{
+    position: absolute;
+    left: 15%;} */
+ #hair2,#hair1,#dress{
+     transform-origin:top;
+     transform-box: fill-box;
+     animation: hair 2s linear infinite alternate;
+ } 
+ #plant1,#plant2,#plant3{
+     transform-origin: bottom;
+     animation: plant 2s linear infinite alternate;
+     transform-box: fill-box;
+     
+ }
+
+ @keyframes hair{
+         to{
+             transform:rotateZ(4deg);
+            
+
+         }
+         from{
+             transform: rotateZ(0);
+          
+
+         }
+ }  
+ @keyframes plant{
+         to{
+             transform:rotateZ(-3deg);                    
+            
+
+         }
+         from{
+             transform: rotateZ(0);
+          
+
+         }
+ }  
 .navlinks{
     height: 10vh;
     /* width: 100%; */
@@ -30,7 +65,7 @@ body{
     color: aliceblue;
     border-radius:10px;
 }
-main{
+.mainpage{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -38,7 +73,7 @@ main{
     font-family: 'Playfair Display', serif;
     /* margin:auto; */
 }
-main h1{
+.mainpage h1{
     /* color: white; */
     font-family: 'Roboto Slab', serif;
     font-size: 45px;
@@ -49,7 +84,7 @@ main h1{
     top:20%;
     left: 7%; */
 }
-main h3{
+.mainpage h3{
     /* color: white; */
     font-family: 'Roboto Slab', serif;
     font-size: 30px;
@@ -65,6 +100,7 @@ main h3{
 #intro{
     position: relative;
     white-space: nowrap;
+    /* background-color: #6C63FF; */
 }
 .hide10{
     display:none;
@@ -108,7 +144,7 @@ main h3{
     animation: exit 1s linear forwards;
 }
 @media(max-width:1100px){
-    main h1{
+    .mainpage h1{
         font-size:32px;
     }   
     .svgcharacter{
@@ -117,7 +153,7 @@ main h3{
     }
 }
 @media(max-width:800px){
-    main h1{
+    .mainpage h1{
         font-size:33px;
         line-height: normal;
         text-align: center;
@@ -125,18 +161,21 @@ main h3{
         /* position: absolute;
         top:40%;
         left: 2%; */
-    }main h3{
+    }
+    .mainpage h3{
+        position: absolute;
         top: 75%;
-        left: 35%;
+        left: 25%;
         font-size: 30px;
     }
-main{
+    .mainpage{
     height: 70vh;
     display: flex;
     justify-content: space-around;
     flex-direction: column-reverse;
     margin-bottom:20vh ;
 }
+
 }
 @media(max-width:500px){
     nav{
@@ -176,21 +215,24 @@ main{
         pointer-events: all;
 
     }   
-    main{
+    .mainpage{
         /* transform: rotateZ(30); */
         padding-top: 60px;
         height: 80vh;}
-    main h1{
+    .mainpage h1{
         font-size: 30px;
     }
-    .introwords{
-        position: relative;
-        display: block;
-        top:50%;
-        left: 0%;
-        transform: translateZ(30);
+    .mainpage svg{
+        width: 90%;
+    }
+    .mainpage h3{
+        position: absolute;
+        /* display: block; */
+        /* top:50%; */
+        left: 20%;
+        /* transform: translateZ(30); */
         width: 100%;
-        text-align: center;
+        /* text-align: center; */
         /* left:; */
         /* transform: translate(-50%,-50%)!important; */
         white-space: nowrap;
@@ -202,19 +244,18 @@ main{
     letter-spacing: 3px;
 }
 .technologiesinabit{
+    width:100%;
     display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    /* grid-template-columns: repeat(auto,minmax(400px,1fr)); */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
     align-content: center;
     margin:auto;
-    text-align: center;
 }
 .eachtechnology{
     margin:20px;
     padding:20px;
-    border:1px solid rgba(0, 0, 0, 0.1)
+    border:1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 .technologydesc{
     padding:10px 30px;
@@ -224,4 +265,8 @@ main{
 .technologyheading{
     font-size: 25px;
     font-family: 'Poppins', sans-serif;
+}
+.eachtechnology img{
+    width: 100px;
+    height: 100px;
 }
