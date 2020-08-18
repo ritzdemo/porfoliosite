@@ -143,6 +143,55 @@
    opacity: 0;
     animation: exit 1s linear forwards;
 }
+.optionheader{
+    /* min-height: 10vh; */
+    text-align: center;
+    /* font-family: 'Dancing Script', cursive; */
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Playfair Display', serif; */
+    /* font-family: 'Pacifico', cursive; */
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 3px; 
+    font-size: 30px;
+    width: 40%; 
+    text-align: center; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3); 
+    line-height: 0.1em;
+    margin: 20px auto;
+    /* margin: 10px 0 20px;  */
+}
+.optionheader span{
+    background:#fff; 
+    padding:0 10px;
+}
+.technologiesinabit{
+    width:100%;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    align-content: center;
+    margin:auto;
+}
+.eachtechnology{
+    margin:20px;
+    padding:20px;
+    border:1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.technologydesc{
+    padding:10px 30px;
+    font-size: 15px;
+    font-family: 'Roboto Slab', serif;
+}
+.technologyheading{
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+.eachtechnology img{
+    width: 100px;
+    height: 100px;
+}
 @media(max-width:1100px){
     .mainpage h1{
         font-size:32px;
@@ -163,6 +212,7 @@
         left: 2%; */
     }
     .mainpage h3{
+        overflow: hidden;
         position: absolute;
         top: 75%;
         left: 25%;
@@ -174,6 +224,10 @@
     justify-content: space-around;
     flex-direction: column-reverse;
     margin-bottom:20vh ;
+}
+.optionheader{
+    width: 70%;
+    font-size:25px
 }
 
 }
@@ -237,60 +291,8 @@
         /* transform: translate(-50%,-50%)!important; */
         white-space: nowrap;
     }
+    .optionheader{
+        width: 90%;
+        font-size:20px
+    }
 }
-.optionheader{
-    /* min-height: 10vh; */
-    text-align: center;
-    /* font-family: 'Dancing Script', cursive; */
-    /* font-family: 'Poppins', sans-serif; */
-    /* font-family: 'Playfair Display', serif; */
-    /* font-family: 'Pacifico', cursive; */
-    font-family: 'Roboto Slab', serif;
-    letter-spacing: 3px; 
-    font-size: 30px;
-    width: 40%; 
-    text-align: center; 
-    border-bottom: 1px solid #000; 
-    line-height: 0.1em;
-    margin: 20px auto;
-    /* margin: 10px 0 20px;  */
-}
-.optionheader span{
-    background:#fff; 
-    padding:0 10px;
-}
-.technologiesinabit{
-    width:100%;
-    min-height: 90vh;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-content: center;
-    align-content: center;
-    margin:auto;
-}
-.eachtechnology{
-    margin:20px;
-    padding:20px;
-    border:1px solid rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-.technologydesc{
-    padding:10px 30px;
-    font-size: 15px;
-    font-family: 'Roboto Slab', serif;
-}
-.technologyheading{
-    font-size: 25px;
-    font-family: 'Poppins', sans-serif;
-}
-.eachtechnology img{
-    width: 100px;
-    height: 100px;
-}
-/* .techinjust{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: space-around; */
-} */
