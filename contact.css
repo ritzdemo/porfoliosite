@@ -1,0 +1,77 @@
+.contactusgrid{
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: #6C63FF; */
+    /* grid-template-areas: "a b c"
+                         "a b d"
+                         "a b e"
+                         "a b f"
+    ; */
+    grid-template-areas: "a b b"
+                         "a c d"
+                         "a e f";
+    
+    padding: 20px;
+    font-family: "Poppins";
+}
+.contactusgrid div{
+    /* margin:20px */
+}
+.contactusgrid svg{
+    grid-area: a;
+}
+.contactusgrid h2{
+    grid-area: b;
+    padding:20px;
+    text-align: center;
+}
+.contactusgrid div{
+    padding:5px 20px;
+}
+.instagram{
+    vertical-align: middle;
+    grid-area: c;
+}
+.facebook{
+    grid-area: d;
+}
+.twitter{
+    grid-area: e;
+}
+.gmail{
+    grid-area: f;
+}
+.contactusgrid a{
+    text-decoration-line: none;
+    color: #6C63FF;
+}
+@media(max-width:800px){
+       
+    .contactusgrid h2{
+        /* padding:10px; */
+    }
+    .contactusgrid a{
+        font-size: 10px;
+    }
+}
+@media(max-width:600px){
+    .contactusgrid{
+        grid-template-areas: "b b b b"
+                             "c d e f"
+    ;
+    }   
+    .contactusgrid span{
+        display: none;
+    }
+    .contactussvg{
+        width: 200;
+        display: none;
+    }
+    .contactusgrid div{
+        padding:20px;
+    }
+    .contactusgrid h2{
+        font-size: 15px;
+    }
+}

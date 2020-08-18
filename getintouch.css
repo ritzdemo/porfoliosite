@@ -1,0 +1,88 @@
+/* .getintouchform{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    text-align: center;
+}
+
+@media(max-width:800px){
+    .getintouchform{
+        grid-template-areas: "a b"
+                              "a c"
+                              "a d"
+                              "a e";
+    }
+    .getintouchform svg{
+        grid-area: a;
+    }
+    .getintouchform input{
+        grid-area: b;
+    }
+    .getintouchform textarea{
+        grid-area: c;
+    }
+    .getintouchform button{
+        grid-area: d;
+    }
+} */
+.getintouchdiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.getintouchform{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.getintouchform input{
+    height: 20px;
+    margin: 10px auto;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #6C63FF;
+    outline:none;
+    padding: 10px;
+    font-family: "Poppins";
+}
+.getintouchform input::placeholder{
+    /* font-family: "Roboto"; */
+}
+.sendgetintouch{
+    width: 80px;
+    margin:10px auto ;
+    height: 50px;   
+    border-radius: 10px;
+    border: none;
+    background-color: #6C63FF;
+    color: aliceblue;
+    vertical-align: middle;
+}
+.getintouchform textarea{
+    width: 300px;
+    border: 1px solid #6C63FF;
+    height: 100px;
+    margin: 10px auto;
+    padding:10px;
+    font-family: "Poppins";
+}
+/* .getintouchform textarea::placeholder{
+    font-family: "Roboto";
+} */
+.getintouchform svg{
+    width: 10px;
+    height: 10px;
+}
+@media(max-width:800px){
+    .getintouchform input,.getintouchform textarea{   
+        width: 250px;
+    }
+}
+@media(max-width:500px){
+    .getintouchdiv{
+        flex-direction: column;}
+}
