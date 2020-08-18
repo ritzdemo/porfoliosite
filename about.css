@@ -5,6 +5,8 @@
 }
 .aboutusmain{
     display: block;
+}
+.aboutme{
     margin:0px 20px 0px 50px ;
 }
 .aboutheading{
@@ -86,7 +88,7 @@
 }
 @media(max-width:1100px){
     .eachexperience{
-        clip-path: circle(20% at 30% 45%);
+        clip-path: circle(20% at 35% 20%);
     }   
 }
 @media(max-width:800px){
