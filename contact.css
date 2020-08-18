@@ -57,7 +57,8 @@
 }
 @media(max-width:600px){
     .contactusgrid{
-        grid-template-areas: "b b b b"
+        grid-template-areas: "a a a a"
+                             "b b b b"
                              "c d e f"
     ;
     }   
@@ -65,8 +66,9 @@
         display: none;
     }
     .contactussvg{
+        margin: auto;
         width: 200;
-        display: none;
+        /* display: none; */
     }
     .contactusgrid div{
         padding:20px;
