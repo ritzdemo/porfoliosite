@@ -5,6 +5,7 @@
 }
 .aboutusmain{
     display: block;
+    margin:0px 20px 0px 50px ;
 }
 .aboutheading{
     font-size: 50px;
@@ -13,11 +14,12 @@
 }
 .aboutmedesc{
     width: 70%;
-    padding:20px;
+    margin-bottom: 20px;
+    /* padding:20px; */
 }
 .aboutintro{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 .downloadcv{
@@ -26,7 +28,7 @@
     border: none;
     background-color: #6C63FF;
     color: aliceblue;
-    margin-left: 50px;
+    /* margin-left: 40px; */
 }
 .downloadcv:hover{
     background-color: aliceblue;
@@ -52,6 +54,7 @@
 .experience{
     display: flex;
     margin: 20px;
+    margin-left: 50px;
     /* flex-wrap: wrap; */
     /* align-items: center; */
     /* width: 400px;
@@ -79,6 +82,7 @@
 .eachexperience h1,.eachexperience p{
     color:white;
     display: block;
+    padding:10px;
 }
 @media(max-width:1100px){
     .eachexperience{
@@ -94,8 +98,11 @@
     .aboutsvg{
         /* display: none; */
     }
+    .aboutintro{
+        flex-direction: column-reverse;
+    }
     .aboutmedesc{
-        width: 90%;
+        width: 100%;
     }
     .aboutheading{
         font-size: 30px;
