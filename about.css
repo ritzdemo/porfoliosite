@@ -77,7 +77,7 @@
     /* color: rgba(0, 0, 0, 0); */
 }
 .eachexperience h1,.eachexperience p{
-    color: white;
+    color:white;
     display: block;
 }
 @media(max-width:1100px){
@@ -92,7 +92,7 @@
 }
 @media(max-width:600px){
     .aboutsvg{
-        display: none;
+        /* display: none; */
     }
     .aboutmedesc{
         width: 90%;
@@ -100,14 +100,13 @@
     .aboutheading{
         font-size: 30px;
     }
-    
     .experience{
         flex-wrap: wrap;
     }
-    .optionheader{
-        width: 90%;
-    }
     .eachexperience{
-        clip-path:circle(23% at 27% 15%);
+        clip-path: circle(23% at 15% 15%)
+    }
+    .eachexperience img{
+        margin: 0px;
     }   
 }
