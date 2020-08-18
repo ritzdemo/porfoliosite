@@ -1,6 +1,6 @@
 .contactusgrid{
     display: grid;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     /* background-color: #6C63FF; */
     /* grid-template-areas: "a b c"
@@ -10,9 +10,11 @@
     ; */
     grid-template-areas: "a b b"
                          "a c d"
-                         "a e f";
+                         "a e f"
+                         "a g h";
     
-    padding: 20px;
+    padding: 50px 20px 50px 50px;
+    font-size: 13px;
     font-family: "Poppins";
 }
 .contactusgrid div{
@@ -42,14 +44,21 @@
 .gmail{
     grid-area: f;
 }
+.github{
+    grid-area: g;
+    /* text-align: center; */
+}
+.linkedIn{
+    grid-area: h;
+}
 .contactusgrid a{
     text-decoration-line: none;
     color: #6C63FF;
 }
 @media(max-width:800px){
        
-    .contactusgrid h2{
-        /* padding:10px; */
+    .contactusgrid {
+        padding:10px;
     }
     .contactusgrid a{
         font-size: 10px;
@@ -57,9 +66,9 @@
 }
 @media(max-width:600px){
     .contactusgrid{
-        grid-template-areas: "a a a a"
-                             "b b b b"
-                             "c d e f"
+        grid-template-areas: "a a a a a a"
+                             "b b b b b b"
+                             "c d e f g h"
     ;
     }   
     .contactusgrid span{
@@ -71,7 +80,8 @@
         /* display: none; */
     }
     .contactusgrid div{
-        padding:20px;
+        text-align: center;
+        padding:0px;
     }
     .contactusgrid h2{
         font-size: 15px;
