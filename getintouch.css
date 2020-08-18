@@ -30,10 +30,12 @@
 } */
 .getintouchdiv{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 50px 20px 50px 50px;
 }
 .getintouchform{
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -42,7 +44,7 @@
 .getintouchform input{
     height: 20px;
     margin: 10px auto;
-    width: 300px;
+    width: 400px;
     border: none;
     border-bottom: 1px solid #6C63FF;
     outline:none;
@@ -53,9 +55,9 @@
     /* font-family: "Roboto"; */
 }
 .sendgetintouch{
-    width: 80px;
+    width: 60px;
     margin:10px auto ;
-    height: 50px;   
+    height: 40px;   
     border-radius: 10px;
     border: none;
     background-color: #6C63FF;
@@ -63,7 +65,7 @@
     vertical-align: middle;
 }
 .getintouchform textarea{
-    width: 300px;
+    width: 400px;
     border: 1px solid #6C63FF;
     height: 100px;
     margin: 10px auto;
@@ -78,6 +80,9 @@
     height: 10px;
 }
 @media(max-width:800px){
+    .getintouchdiv{
+        padding:20px;
+    }
     .getintouchform input,.getintouchform textarea{   
         width: 250px;
     }
@@ -85,4 +90,7 @@
 @media(max-width:500px){
     .getintouchdiv{
         flex-direction: column;}
+        .getintouchform{
+            width: auto;
+        }
 }
