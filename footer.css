@@ -1,0 +1,18 @@
+footer{
+    text-align: center;
+    padding:20px;
+    background-color: #6C63FF;
+    color: aliceblue;
+    font-family: "Poppins";
+    font-size: 14px;
+}
+@media(max-width:800px){
+    footer{
+        font-size: 12px;
+    }
+}
+@media(max-width:500px){
+    footer{
+        font-size: 10px;
+    }
+}
