@@ -3,17 +3,20 @@
     padding:0px;
     box-sizing: border-box;
 }
+body{
+    overflow-x: hidden;
+}
 /* svg{
     position: absolute;
     left: 15%;} */
  #hair2,#hair1,#dress{
      transform-origin:top;
      transform-box: fill-box;
-     animation: hair 2s linear infinite alternate;
+     animation: hair 1s linear infinite alternate;
  } 
  #plant1,#plant2,#plant3{
      transform-origin: bottom;
-     animation: plant 2s linear infinite alternate;
+     animation: plant 1s linear infinite alternate;
      transform-box: fill-box;
      
  }
@@ -296,4 +299,11 @@
         width: 90%;
         font-size:20px
     }
+    .mainpage h3{
+        width: fit-content;
+        /* overflow-x: hidden; */
+    }
+body{
+    overflow-x: hidden;
+}
 }
