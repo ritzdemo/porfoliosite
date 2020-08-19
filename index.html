@@ -380,9 +380,11 @@
             <p>&#169;  Developed by Riddhi Siddarkar | Goa | India</p>
         </footer>
     <script>
-        let localstoragecolor=localStorage.getItem("color")
-        if(localstoragecolor=="black")
+ let localstoragecolor=localStorage.getItem("color")
+        var checkbox = document.querySelector('input[name=theme]');
+        if(localstoragecolor=="black"){
         document.documentElement.setAttribute('data-theme', 'dark')
+        checkbox.checked=true}
         let boolhamburger=true
         console.log(window.innerWidth)
         if(window.innerWidth+60<=500)
@@ -418,8 +420,6 @@
         //         element.classList.toggle("open")
         //     })
         // });
-        var checkbox = document.querySelector('input[name=theme]');
-
 checkbox.addEventListener('change', function() {
     if(this.checked) {
         trans()
