@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+<!-- <html lang="en" data-theme="dark"> -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./about.css">
-    <link rel="stylesheet" href="./contact.css">
-    <link rel="stylesheet" href="./getintouch.css">
-    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/getintouch.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
@@ -25,11 +26,17 @@
             <li>Home</li>
             <li>Technologies</li>
             <li>Contact me</li>
+            <li>  
+                  <!-- <div class="container"> -->
+                <div class="toggle-container">
+                    
+                <span>Light / Dark Mode  &nbsp; </span>
+                    <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label></li>
         </ul>
     </nav>
         <main class="mainpage">
             <section class="mainintro">
-                <h1 id="name">Riddhi Rajendra Siddarkar</h1>
+                <h1 id="name">Riddhi <span id="middlename">Rajendra</span> Siddarkar</h1>
                 <!-- <h3 id="introwords"><span>Web developer</span><span> Coder </span><span>Content Writer</span></h3> -->
                 <div id="intro">
                 <h3 class="introwords enter">Web developer</h3>
@@ -370,9 +377,12 @@
             </div>
         </section>
         <footer>
-            <p>&#169;  Developed by Riddhi Siddarkar and Dheeraj Gandhi | Goa | India</p>
+            <p>&#169;  Developed by Riddhi Siddarkar | Goa | India</p>
         </footer>
     <script>
+        let localstoragecolor=localStorage.getItem("color")
+        if(localstoragecolor=="black")
+        document.documentElement.setAttribute('data-theme', 'dark')
         let boolhamburger=true
         console.log(window.innerWidth)
         if(window.innerWidth+60<=500)
@@ -403,11 +413,31 @@
             });
             document.querySelector(".navlinks").classList.toggle("open")
         });
-        document.querySelector(".eachexperience").forEach(element => {
-            element.addEventListener("click",(e)=>{
-                element.classList.toggle("open")
-            })
-        });
+        // document.querySelector(".eachexperience").forEach(element => {
+        //     element.addEventListener("click",(e)=>{
+        //         element.classList.toggle("open")
+        //     })
+        // });
+        var checkbox = document.querySelector('input[name=theme]');
+
+checkbox.addEventListener('change', function() {
+    if(this.checked) {
+        trans()
+        document.documentElement.setAttribute('data-theme', 'dark')
+        localStorage.setItem("color","black")
+    } else {
+        trans()
+        document.documentElement.setAttribute('data-theme', 'light')
+        localStorage.setItem("color","white")
+    }
+})
+
+let trans = () => {
+    document.documentElement.classList.add('transition');
+    window.setTimeout(() => {
+        document.documentElement.classList.remove('transition')
+    }, 1000)
+}
     </script>
 </body>
 </html>
