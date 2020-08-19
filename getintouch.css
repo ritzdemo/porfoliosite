@@ -28,6 +28,17 @@
         grid-area: d;
     }
 } */
+html{
+    --bg:white;
+    --heading:black;
+    --color:#6C63FF;
+    --border:rgba(0,0,0,0.3);
+}
+html[data-theme='dark'] {
+    --bg:#333333;
+    --heading:white;
+    --border:rgba(255,255,255,0.3);
+}
 .getintouchdiv{
     display: flex;
     justify-content: space-between;
@@ -50,6 +61,7 @@
     outline:none;
     padding: 10px;
     font-family: "Poppins";
+    background-color: var(--bg);
 }
 .getintouchform input::placeholder{
     /* font-family: "Roboto"; */
@@ -61,7 +73,7 @@
     border-radius: 10px;
     border: none;
     background-color: #6C63FF;
-    color: aliceblue;
+    color: var(--bg);
     vertical-align: middle;
 }
 .getintouchform textarea{
@@ -71,6 +83,7 @@
     margin: 10px auto;
     padding:10px;
     font-family: "Poppins";
+    background-color: var(--bg);
 }
 /* .getintouchform textarea::placeholder{
     font-family: "Roboto";
