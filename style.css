@@ -3,9 +3,76 @@
     padding:0px;
     box-sizing: border-box;
 }
+html{
+    --bg:white;
+    --heading:black;
+    --color:#6C63FF;
+    --border:rgba(0,0,0,0.3);
+}
+html[data-theme='dark'] {
+    --bg:#333333;
+    --heading:white;
+    --border:rgba(255,255,255,0.3);
+}
 body{
     overflow-x: hidden;
+    background:var(--bg)
 }
+/*for the toggle*/
+.toggle-container input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.toggle-container label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 52px;
+	height: 27px;
+	background: grey;
+	float: right;
+	border-radius: 100px;
+	position: relative;
+}
+
+.toggle-container label:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+.toggle-container input:checked + label {
+	background: var(--color);
+}
+
+.toggle-container input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+.toggle-container label:active:after {
+	width: 45px;
+}
+.toggle-container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+/*for the toggle*/
 /* svg{
     position: absolute;
     left: 15%;} */
@@ -18,7 +85,6 @@ body{
      transform-origin: bottom;
      animation: plant 1s linear infinite alternate;
      transform-box: fill-box;
-     
  }
 
  @keyframes hair{
@@ -53,10 +119,11 @@ body{
     align-items: center;
     margin-left: auto;
     /* float: right; */
-    /* background-color:#6C63FF; */
+    /* background-color:var(--color); */
     /* color: aliceblue; */
-    color: #6C63FF;
-    width: 500px;
+    color: var(--color);
+    width:60%;
+    /* width: 500px; */
 }
 .navlinks li{
     list-style: none;
@@ -64,8 +131,9 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 .navlinks li:hover{
-    background-color: #6C63FF;
-    color: aliceblue;
+    background-color: var(--color);
+    /* color: aliceblue; */
+    color: var(--bg);
     border-radius:10px;
 }
 .mainpage{
@@ -82,6 +150,7 @@ body{
     font-size: 45px;
     letter-spacing: 3px;
     line-height: 100px;
+    color: var(--heading);
     /* padding: 20px; */
     /* position: absolute;
     top:20%;
@@ -96,14 +165,14 @@ body{
     top:60%;
     left: 7%;
     font-size: 30px;
-    color: #6C63FF;
+    color: var(--color);
     /* transform: translate(-50%,-50%); */
     /* display: inline; */
 }
 #intro{
     position: relative;
     white-space: nowrap;
-    /* background-color: #6C63FF; */
+    /* background-color: var(--color); */
 }
 .hide10{
     display:none;
@@ -159,13 +228,14 @@ body{
     font-size: 30px;
     width: 40%; 
     text-align: center; 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3); 
+    border-bottom: 1px solid var(--heading); 
     line-height: 0.1em;
     margin: 30px auto;
+    color: var(--heading);
     /* margin: 10px 0 20px;  */
 }
 .optionheader span{
-    background:#fff; 
+    background:var(--bg); 
     padding:0 10px;
 }
 .technologiesinabit{
@@ -176,11 +246,12 @@ body{
     justify-content: center;
     align-content: center;
     margin:auto;
+    color: var(--heading);
 }
 .eachtechnology{
     margin:20px;
     padding:20px;
-    border:1px solid rgba(0, 0, 0, 0.1);
+    border:1px solid var(--border);
     text-align: center;
 }
 .technologydesc{
@@ -203,6 +274,9 @@ body{
     .svgcharacter{
         width: 300px;
         height: 300px;
+    }
+    .navlinks{
+        width:75%;
     }
 }
 @media(max-width:800px){
@@ -234,6 +308,10 @@ body{
     font-size:25px;
 }
 
+.navlinks{
+    width:95%;
+    font-size: 12px;
+}
 }
 @media(max-width:500px){
     nav{
@@ -249,18 +327,18 @@ body{
         width:30px;
         height: 1px;
         margin: 5px;
-        background-color: #6C63FF;
+        background-color: var(--color);
         z-index: 3;
     }
     .line.open{
-        background-color: aliceblue;
+        background-color: var(--bg);
     }
     .navlinks{
         position: fixed;
         height: 100vh;
         width: 100%;
-        color: aliceblue;
-        background-color: #6C63FF;
+        color: var(--bg);
+        background-color: var(--color);
         flex-direction: column;
         top: 0px;
         z-index: 2;
@@ -302,6 +380,9 @@ body{
     .mainpage h3{
         width: fit-content;
         /* overflow-x: hidden; */
+    }
+    #middlename{
+        display: none;
     }
 body{
     overflow-x: hidden;
