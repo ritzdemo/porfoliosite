@@ -43,7 +43,7 @@ html[data-theme='dark'] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 20px 50px 50px;
+    padding: 50px 20px 50px 30px;
 }
 .getintouchform{
     width: 60%;
