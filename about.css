@@ -3,6 +3,17 @@
     margin:0px;
     box-sizing: border-box;
 }
+html{
+    --bg:white;
+    --heading:black;
+    --color:#6C63FF;
+    --border:rgba(0,0,0,0.3);
+}
+html[data-theme='dark'] {
+    --bg:#333333;
+    --heading:white;
+    --border:rgba(255,255,255,0.3);
+}
 .aboutusmain{
     display: block;
 }
@@ -11,12 +22,13 @@
 }
 .aboutheading{
     font-size: 50px;
-    color: #6C63FF;
+    color: var(--border);
     padding:50px 0px 20px 20px;
 }
 .aboutmedesc{
     width: 70%;
     margin-bottom: 20px;
+    color: var(--heading);
     /* padding:20px; */
 }
 .aboutintro{
@@ -28,14 +40,14 @@
     padding:20px;
     border-radius: 10px;
     border: none;
-    background-color: #6C63FF;
-    color: aliceblue;
+    background-color: var(--color);
+    color: var(--heading);
     /* margin-left: 40px; */
 }
 .downloadcv:hover{
     background-color: aliceblue;
-    color: #6C63FF;
-    border:1px solid #6C63FF
+    color: var(--color);
+    border:1px solid var(--color)
 }
 .eachexperience{
     /* background-color: rgb(7, 218, 165); */
@@ -64,15 +76,15 @@
 }
 .eachexperience:hover{
     clip-path: circle(75%);
-    background-color: #6C63FF;
+    background-color: var(--color);
 }
 .eachexperience.open{
     clip-path: circle(75%);
-    background-color: #6C63FF;
+    background-color: var(--color);
 }
 .eachexperience img{
     /* float: left; */
-    color: white;
+    color: var(--bg);
     font-weight: bold;
     transition: color .5s;
     /* position: relative; */
@@ -82,7 +94,7 @@
     /* color: rgba(0, 0, 0, 0); */
 }
 .eachexperience h1,.eachexperience p{
-    color:white;
+    color:var(--heading);
     display: block;
     padding:10px;
     /* display: none; */
