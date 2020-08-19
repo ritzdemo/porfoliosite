@@ -1,3 +1,14 @@
+html{
+    --bg:white;
+    --heading:black;
+    --color:#6C63FF;
+    --border:rgba(0,0,0,0.3);
+}
+html[data-theme='dark'] {
+    --bg:#333333;
+    --heading:white;
+    --border:rgba(255,255,255,0.3);
+}
 .contactusgrid{
     display: grid;
     justify-content: space-between;
@@ -16,6 +27,7 @@
     padding: 50px 20px 50px 50px;
     font-size: 13px;
     font-family: "Poppins";
+    color: var(--heading);
 }
 .contactusgrid div{
     /* margin:20px */
@@ -53,7 +65,7 @@
 }
 .contactusgrid a{
     text-decoration-line: none;
-    color: #6C63FF;
+    color: var(--color);
 }
 @media(max-width:800px){
        
