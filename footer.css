@@ -1,8 +1,19 @@
+html{
+    --bg:white;
+    --heading:black;
+    --color:#6C63FF;
+    --border:rgba(0,0,0,0.3);
+}
+html[data-theme='dark'] {
+    --bg:#333333;
+    --heading:white;
+    --border:rgba(255,255,255,0.3);
+}
 footer{
     text-align: center;
     padding:20px;
-    background-color: #6C63FF;
-    color: aliceblue;
+    background-color: var(--color);
+    color: var(--bg);
     font-family: "Poppins";
     font-size: 14px;
 }
